@@ -20,10 +20,20 @@ body{
     flex-wrap: wrap;
 }
 
+section {
+    margin-bottom: 2rem;
+}
+
 /* for debugging */
 /* .main div {
     border: #ccc 1px solid;
 } */
+
+.placeholder {
+    height: 25rem;
+    width: 100%;
+    border: #ccc solid 1px;
+}
 
 /* Headings */
 h1 {
@@ -145,7 +155,6 @@ a.link-button {
     background-color: white;
     text-decoration: none;
     width: 12rem;
-    height: 4rem;
     text-align: center;
     letter-spacing: 0.06rem;
     border: 2px solid #57606f;
@@ -165,7 +174,6 @@ a.link-button-dark {
     background-color: #57606f;
     text-decoration: none;
     width: 12rem;
-    height: 4rem;
     text-align: center;
     letter-spacing: 0.06rem;
     border: 2px solid #57606f;
@@ -177,6 +185,10 @@ a.link-button-dark:hover {
     background-color: white;
     border: 2px solid #57606f;
     transition: background-color 0.3s;
+}
+
+.float-right {
+    float: right;
 }
 
 a.intext-link {
@@ -197,6 +209,23 @@ a.img-cover img {
 
 a.img-cover img:hover {
     opacity: 0.6;
+}
+
+#intro {
+    position: relative;
+    height: 300px;
+    background-image: linear-gradient(#63cdda, #f1f2f6);
+    z-index: -1;
+}
+#intro .text {
+    padding: 1rem 5rem;
+}
+svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vw;
+    /* set height to pixels if you want angle to change with screen width */
 }
 
 @media (max-width:900px) {
@@ -247,6 +276,14 @@ a.img-cover img:hover {
     .main {
       margin: 0;
       padding: 1rem 1rem;
+    }
+
+    #intro {
+        height: auto;
+    }
+
+    #intro .text {
+        padding: 2rem;
     }
 }
 
