@@ -1,0 +1,175 @@
+*,*::after, *::before {
+    box-sizing: border-box;
+}
+
+div > * {
+    transition: all 0.2s linear;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    margin-top: 1rem;
+    padding: 2rem 5rem;
+    flex-wrap: wrap;
+}
+
+/* for debugging */
+.main div {
+    border: #ccc 1px solid;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2.3em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 500;
+    color: #57606f;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #f1f2f6;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    max-width: 46em;
+    line-height: 1.5em;
+}
+
+/* button */
+a.nav-button {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #000000;
+    border-bottom: #000 1px solid;
+    margin: 0.8rem 1rem;
+    padding: 0.2rem 0.5rem;
+}
+
+a.nav-button:hover {
+    border-bottom: transparent 1px solid;
+    transition: color 0.3s;
+}
+
+a.nav-button:focus {
+    color: #63cdda;
+    border-bottom: transparent 1px solid;
+    transition: color 0.3s;
+}
+
+a.nav-button img {
+    width: 4rem;
+}
+
+/* navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+    top: 10rem;
+    right: 0;
+    position: fixed;
+}
+
+li {
+    cursor: pointer;
+}
+
+li a {
+    display: block;
+}
+
+.grid-box {
+    margin: 0 1em 1em 1em;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sub-grid-box {
+    padding: 0;
+    margin: 1em;
+    width: 46%;
+    height: auto;
+}
+
+a.img-cover img {
+    width: 100%;
+    background-color: #ccc;
+    height: 15rem;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+a.img-cover img:hover {
+    opacity: 0.6;
+}
+
+@media (max-width:900px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+}
+
+@media (max-width:650px){
+    .main{
+      margin:0;
+      padding: 1rem 1rem;
+    }
+}
+
+.title {
+    width: 100%;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
