@@ -15,14 +15,15 @@ body{
 .main {
     display: flex;
     margin-top: 1rem;
+    margin-right: 1.5rem; 
     padding: 2rem 5rem;
     flex-wrap: wrap;
 }
 
 /* for debugging */
-.main div {
+/* .main div {
     border: #ccc 1px solid;
-}
+} */
 
 /* Headings */
 h1 {
@@ -45,7 +46,7 @@ h3 {
 h4 {
     font-size: 1.2em;
     font-weight: 400;
-    color: #f1f2f6;
+    color: #57606f;
 }
 
 p {
@@ -53,6 +54,21 @@ p {
     font-weight: 300;
     max-width: 46em;
     line-height: 1.5em;
+}
+
+#work h2, #about h2, #contact h2{
+    border-left: 8px solid #63cdda;
+    padding-left: 1rem; 
+}
+
+.color-text {
+    color: #63cdda;
+}
+
+.emphasize-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-right: 0.2rem;
 }
 
 /* button */
@@ -120,6 +136,57 @@ li a {
     height: auto;
 }
 
+a.link-button {
+    padding: 0.6rem 2.4rem;
+    margin: 0 1.6rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #57606f;
+    background-color: white;
+    text-decoration: none;
+    width: 12rem;
+    height: 4rem;
+    text-align: center;
+    letter-spacing: 0.06rem;
+    border: 2px solid #57606f;
+}
+    
+a.link-button:hover {
+    color: white;
+    background-color: #57606f;
+    transition: background-color 0.3s;
+}
+    
+a.link-button-dark {
+    padding: 0.6rem 2.4rem;
+    margin: 0 1.6rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #57606f;
+    text-decoration: none;
+    width: 12rem;
+    height: 4rem;
+    text-align: center;
+    letter-spacing: 0.06rem;
+    border: 2px solid #57606f;
+    color: white;
+}
+    
+a.link-button-dark:hover {
+    color: #57606f;
+    background-color: white;
+    border: 2px solid #57606f;
+    transition: background-color 0.3s;
+}
+
+a.intext-link {
+    color: #000;
+}
+
+a.intext-link:hover, a.intext-link:focus {
+    color: #57606f;
+}
+
 a.img-cover img {
     width: 100%;
     background-color: #ccc;
@@ -150,14 +217,35 @@ a.img-cover img:hover {
     }
 
     p {
-      font-size: 1rem;
-      line-height: 1.4rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    .main{
+        margin: 0;
+        padding: 2rem 2rem;
+    }
+
+    .sub-grid-box {
+        width: auto;
     }
 }
 
 @media (max-width:650px){
-    .main{
-      margin:0;
+    ul {
+        top: 0;
+        left: 0;
+        position: relative;
+    }
+
+    a.nav-button {
+        font-size: 1rem;
+        margin: 0.7rem 1rem;
+        padding: 0.1rem 1rem;
+    }
+
+    .main {
+      margin: 0;
       padding: 1rem 1rem;
     }
 }
@@ -171,5 +259,9 @@ footer {
     padding: 2rem;
     text-align: center;
     background-color: #000;
+    color: #fff;
+}
+
+footer .intext-link{
     color: #fff;
 }
