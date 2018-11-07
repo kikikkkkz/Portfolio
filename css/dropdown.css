@@ -1,0 +1,197 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+
+.logo{
+	position:absolute;
+	left: 3rem;
+	padding-top: 0.5rem;
+}
+
+.logo h1 {
+	font-size: 1.5rem;
+	padding-top: 0.2rem;
+}
+
+.logo a {
+	text-decoration: none;
+	color: #000;
+}
+
+nav{
+	max-width: 100%;
+	justify-content: flex-end;
+	background-color: #FFF;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*Setting the defaults for flex container*/
+.box {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around;
+}
+
+.box-item-nav {
+	flex-basis: auto;
+}
+
+.button {
+	display: none;
+	text-align: center;
+	background-color: #FFF;
+}
+
+/*A class that allow toggle the visibility of an element*/
+.hidden {
+	display: none;
+}
+
+@media (min-width: 680px) {
+	.menunav {
+		padding: 0 2rem;
+		padding-top: 0.5rem;
+		margin: 0;
+		height: 63px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		list-style-type: none;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	  }
+	  
+	  .menunav li a {
+		text-decoration: none;
+		align-self: center;
+		margin: 0 0.4rem;
+		letter-spacing: 0.07em;
+		font-size:1.0rem;
+		color:rgb(110,110,110);
+		padding:0.75rem;
+		max-width:40rem;
+		transition-duration: 0.3s;
+	  }
+
+	  .menunav li i {
+		margin: auto 0.2rem;
+		letter-spacing: 0.07em;
+		font-size:1.0rem;
+		color:rgb(110,110,110);
+		display: inline-block;
+		vertical-align: middle;
+	  }
+	  
+	  .menunav li a:hover, .menunav li a:focus {
+		color: rgb(245,184,16);
+		border-top:0.2rem rgb(245,184,16) solid; 
+	  }
+
+	  .menunav li:hover i, .menunav li:focus i {
+		color: rgb(245,184,16);
+	  }
+
+	  .menunav li a.active-nav {
+		color: rgb(245,184,16);
+		border-top:0.2rem rgb(245,184,16) solid; 
+	  }
+
+	  .menunav li .active-nav i {
+		color: rgb(245,184,16);
+	  }
+}
+
+@media screen and (max-width:900px) {
+	.menunav li a {
+	  margin: 0 0.1rem;
+	  padding: 0.8rem 0.6rem;
+	  font-size: 0.8rem;
+	  letter-spacing: 0.08em;
+	}
+
+	.menunav li i {
+	  margin: auto 0.1rem;
+	  font-size: 0.8rem;
+	  letter-spacing: 0.08em;
+	}
+  
+	.menunav {
+	  padding: 0 3rem;
+	  padding-top: 0.5rem;
+	}
+}
+
+@media (max-width: 680px) {
+
+	.logo {
+		left: 2rem;
+	}
+
+	.menunav {
+		display: none;
+	}
+
+	.box-item-nav {
+		-webkit-flex: 1 1 100%;
+		-ms-flex: 1 1 100%;
+		flex: 1 1 100%;
+	}
+
+	#menu-toggle {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	.button {
+		cursor: pointer;
+		display: block;
+		clear: both;
+		text-decoration: none;
+		transition: color 0.3s;
+		padding: 0.35rem 2.5rem;
+		padding-top: 0.5rem;
+		margin: 0;
+		border: 0;
+		width: 100%;
+		text-align: right;
+		font-size: 1.8rem;
+		line-height: 35px;
+		height: 63px;
+		align-self: center;
+		transition-duration: 0.3s;
+	}
+
+	.button i{
+		line-height: inherit;
+		font-size: inherit;
+		vertical-align: middle;
+		margin: 0.2rem;
+	}
+	
+	.button:hover, .button:focus {
+		color: rgb(245,184,16);
+	}
+
+	.bg {
+		text-align: center;
+		font-size: 0.8rem;
+		letter-spacing: 0.08em;
+		height: auto;
+		padding: 0 0.4rem;
+		margin: 0.8rem 1rem;
+		line-height: 1.4rem;
+		
+	}
+
+	.active-nav {
+		color: rgb(245,184,16);
+		border-top: none;
+		border-left:0.2rem rgb(245,184,16) solid; 
+	}
+}

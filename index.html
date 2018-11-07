@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Qi Zhang Portfolio</title>
+        <title>Kiki Zhang | Portfolio</title>
         <link rel="icon" href="img/qizhanglogo-icon.png">
         <link href="css/main.css" rel="stylesheet">
+        <link href="css/dropdown.css" rel="stylesheet">
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Roboto" rel="stylesheet">    </head>
 
     <body>
-        <header>
+        <!-- <header>
             <nav>
                 <ul>
                     <li><a href="#" class="nav-button"><img src="img/qizhanglogo-icon.png"></a></li>
@@ -19,33 +20,70 @@
                     <li><a href="#contact" class="nav-button">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
 
-        <section id="intro">
+        <!-- <section id="intro">
             <div class="text">
                 <h1 class="title">Hello, I'm Kiki Zhang</h1>
-                <h4 class="title">UI/UX Designer | Photographer</h4>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,100 100,0 100,100"/>
               </svg>
-            </section>
-
-        <div class="main">
+            </section> -->
+            <header>
+            <!-- dropdown menu -->
+              <nav class="box" id="menu">
             
+                    <div class="box-item-nav">
+                        <a href="index.html" class="button bg">Home</a>
+                    </div>
+            
+                    <div class="box-item-nav">
+                        <a href="about.html" class="button bg">About</a>
+                    </div>
+            
+                    <div class="box-item-nav">
+                        <a href="products.html" class="button bg">Products</a>
+                    </div>
+            
+                    <div class="box-item-nav">
+                        <a href="contact.html" class="button bg">Contact</a>
+                    </div>
+            
+                </nav>
+            </header>
 
+            <div class="top-container">
+                <div class="top-logo">
+                    <a href="#"><img src="img/qizhanglogo-icon.png"></a>
+                    <h1>Kiki Zhang</h1>
+                </div>
+                <!-- <h4>UI/UX designer</h4> -->
+              </div>
+              
+              <div class="header" id="myHeader">
+                <a href="#" id="sticky-logo"><img src="img/qizhanglogo-icon.png"></a>
+                <a href="#work" class="nav-button">Work</a>
+                <a href="#about" class="nav-button">About</a>
+                <a href="#contact" class="nav-button">Contact</a>
+                <a href="gallery.html" class="nav-button">Gallery</a>
+              </div>
+
+              
+        <div class="main content">
+            
             <section id="work">
             <div class="grid-box">
                 <h2 class="title">Work</h2>
-                <div class="sub-grid-box">
+                <div class="sub-grid-box" id="project1">
                     <h3 class="title">Visual Design</h3>
-                    <a href="project1.html" class="img-cover"><img src="img/cover.png" alt="cover"></a>
-                    <h4>A branding redesign for a local start-up company Brilliant Solutions</h4>
+                    <a href="project1.html" class="img-cover"><img src="img/1-cover.png" alt="cover"></a>
+                    <h4>Branding redesign for a local start-up company</h4>
                     <a href="project1.html" class="link-button float-right">View More</a>
                 </div>
-                <div class="sub-grid-box">
+                <div class="sub-grid-box" id="project2">
                     <h3 class="title">Mobile App Design</h3>
-                    <a href="project1.html" class="img-cover"><img src="img/cover.png" alt="cover"></a>
+                    <a href="project2.html" class="img-cover"><img src="img/2-cover.png" alt="cover"></a>
                     <h4>An Android app TagAStreet from design to coding</h4>
                     <a href="project2.html" class="link-button float-right">View More</a>
                 </div>
@@ -62,13 +100,14 @@
                         I am Qi(Kiki) Zhang, a junior student pursuing <span class="color-text">Interactive Arts and Technology</span> major at Simon Fraser University. My interest in UI and UX begins when I started to use the Internet. I remembered how some elements whether appear on the websites or mobile apps wow me sometimes, and I also saw how an easy-to-navigate app can help people, especially family and friends around me. Now, as a design student, I love to make engaging interaction and bring human and computer together.
                     </p> -->
                     <p>
-                    I am a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. My interest is <span class="color-text">fashion</span> and <span class="color-text">technology</span> and I want to pursue a career in making more possibilities between these two industries.
+                    I am Kiki Zhang, a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. I have experience with <a href="#project1" class="intext-link">brand designing</a> and <a href="#project2" class="intext-link">mobile app development</a>. My interest is design and technology and I want to pursue a career in <span class="color-text">UI/UX design</span> or <span class="color-text">product design</span>.
+                    <!-- I am a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. My interest is <span class="color-text">fashion</span> and <span class="color-text">technology</span> and I want to pursue a career in making more possibilities between these two industries.
+                    <br> -->
+                    <!-- <span class="emphasize-text">"Designer"</span> As a <span class="color-text">fashion lover</span>, I work as a <a href="https://www.instagram.com/psychotographer" class="intext-link" target="_blank">freelance street style photographer</a> during New York fashion week and go deep into the industry through reading lots of news and researching through the website and social media.
                     <br>
-                    <span class="emphasize-text">"Designer"</span> As a <span class="color-text">fashion lover</span>, I work as a <a href="https://www.instagram.com/psychotographer" class="intext-link" target="_blank">freelance street style photographer</a> during New York fashion week and go deep into the industry through reading lots of news and researching through the website and social media.
+                    <span class="emphasize-text">"Programmer"</span>As a <span class="color-text">technologist</span>, I learn coding not only in the class but also do lots of self-study during free time. I am able to build a website or a <a href="#" class="intext-link">mobile app</a> with my existing skills.
                     <br>
-                    <span class="emphasize-text">"Programmer"</span>As a <span class="color-text">technologist</span>, I learn coding not only in the class but also do lots of self-study during free time. By conducting these activities, I feel more determined towards myself and also my future career. I also worked on a project for <a href="#" class="intext-link">mobile app</a>.
-                    <br>
-                    <span class="emphasize-text">"UX to me..."</span>In terms of <span class="color-text">user experience</span>, I like to think about design we see in everyday life. I always pay attention to the design failure and come up with multiple ways to improve it. How to make users feel delighted and make the user experience more fluent are the problems I want to focus on.
+                    <span class="emphasize-text">"UX to me..."</span>In terms of <span class="color-text">user experience</span>, I like to think about design we see in everyday life. I always pay attention to the design failure and come up with multiple ways to improve it. How to make users feel delighted and make the user experience more fluent are the problems I want to focus on. -->
                     </p>
                     </div>
                 </div>
@@ -87,9 +126,32 @@
         </div>
 
         <footer>
+            <a href="Qi_Zhang_Resume.pdf" class="intext-link">Resume</a> | 
             <a href="styleguide.html" class="intext-link">Style Guide</a> | 
             <a href="https://gitlab1.its.sfu.ca/qza62/portfolio.git" class="intext-link">Git Lab</a>
         </footer>
         
+        <script src="js/dropdown.js"></script>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            var logo = document.getElementById("sticky-logo");
+
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                header.style.textAlign = "right";
+                header.style.backgroundColor = "rgba(255,255,255,0.8)";
+                logo.style.visibility = "visible";
+              } else {
+                header.classList.remove("sticky");
+                header.style.textAlign = "center";
+                // header.style.backgroundColor = "#f1f2f6";
+                logo.style.visibility = "hidden";
+              }
+            }
+        </script>
     </body>
 </html>

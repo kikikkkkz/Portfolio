@@ -24,6 +24,59 @@ section {
     margin-bottom: 2rem;
 }
 
+.top-container {
+  /* background-color: #f1f2f6; */
+  padding: 55px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 10px;
+  text-align: center;
+  /* background-color: #f1f2f6; */
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.top-logo a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.top-logo img{
+    width: 3rem;
+    margin: 0.8rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.top-logo h1{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a#sticky-logo {
+    visibility: hidden;
+    float: left;
+    margin: 0 0.6rem;
+}
+
+a#sticky-logo img {
+    width: 1.5rem;
+}
 /* for debugging */
 /* .main div {
     border: #ccc 1px solid;
@@ -128,7 +181,7 @@ li a {
 }
 
 .grid-box {
-    margin: 0 1em 1em 1em;
+    /* margin: 0 1em 1em 1em; */
     padding: 0;
     width: 100%;
     height: auto;
@@ -141,8 +194,8 @@ li a {
 
 .sub-grid-box {
     padding: 0;
-    margin: 1em;
-    width: 46%;
+    /* margin: 1em; */
+    width: 45%;
     height: auto;
 }
 
@@ -205,10 +258,11 @@ a.img-cover img {
     height: 15rem;
     cursor: pointer;
     object-fit: cover;
+    transition: all .2s ease-in-out;
 }
 
 a.img-cover img:hover {
-    opacity: 0.6;
+    transform: scale(1.1);
 }
 
 #intro {
@@ -228,6 +282,51 @@ svg {
     /* set height to pixels if you want angle to change with screen width */
 }
 
+.title {
+    width: 100%;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+footer .intext-link{
+    color: #fff;
+}
+
+/*style for project page*/
+.project-container {
+    position: relative;
+    height: auto;
+    width: 60%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.project-img {
+    width: 100%;
+}
+
+.project-gif {
+    width: 64%;
+}
+
+.parent{
+    position: relative;
+}
+
+.over-img{
+    position: absolute;
+    top: 14%;
+    left: 24.5%;
+}
+
+/*breakpoints*/
 @media (max-width:900px) {
     h1 {
       font-size: 2em;
@@ -258,6 +357,10 @@ svg {
     .sub-grid-box {
         width: auto;
     }
+
+    .project-container{
+        width: 80%;
+    }
 }
 
 @media (max-width:650px){
@@ -285,20 +388,47 @@ svg {
     #intro .text {
         padding: 2rem;
     }
+
+    .sub-grid-box {
+        margin: 0.5rem;
+    }
+
+    .project-container{
+        width: 90%;
+    }
 }
 
-.title {
-    width: 100%;
+/*style for gallery page*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
-footer {
-    margin-top: 2rem;
-    padding: 2rem;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
 
-footer .intext-link{
-    color: #fff;
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
