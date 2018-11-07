@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kiki Zhang | Gallery</title>
+        <link rel="icon" href="img/qizhanglogo-icon.png">
+        <link href="css/main.css" rel="stylesheet">
+        <!-- font family -->
+        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Roboto" rel="stylesheet">    </head>
+
+    <body>
+        <div class="top-container">
+            <div class="top-logo">
+                <a href="index.html#"><img src="img/qizhanglogo-icon.png">
+                <h1>Kiki Zhang</h1></a>
+            </div>
+        </div>
+              
+        <div class="header" id="myHeader">
+            <a href="index.html#" id="sticky-logo"><img src="img/qizhanglogo-icon.png"></a>
+            <a href="index.html#work" class="nav-button">Work</a>
+            <a href="index.html#about" class="nav-button">About</a>
+            <a href="index.html#contact" class="nav-button">Contact</a>
+            <a href="gallery.html" class="nav-button">Gallery</a>
+        </div>
+            
+
+        <div class="main content">
+            <h1>Fashion Illustration</h1>
+            <div class="row"> 
+                <div class="column">
+                    <img src="img/gallery-1.jpg" style="width:100%">
+                    <img src="img/gallery-5.jpg" style="width:100%">
+                    <!-- <img src="img/1-sketch.png" style="width:100%"> -->
+                    <!-- <img src="img/1-sketch.png" style="width:100%"> -->
+                </div>
+                <div class="column">
+                    <img src="img/gallery-2.jpg" style="width:100%">
+                    <img src="img/gallery-6.jpg" style="width:100%">
+                    <!-- <img src="img/1-cover.png" style="width:100%"> -->
+                </div>  
+                <div class="column">
+                    <img src="img/gallery-3.jpg" style="width:100%">
+                    <!-- <img src="img/gallery-1.jpg" style="width:100%"> -->
+                    <!-- <img src="img/1-cover.png" style="width:100%"> -->
+                    <!-- <img src="img/1-sketch.png" style="width:100%"> -->
+                </div>
+                <div class="column">
+                    <img src="img/gallery-4.jpg" style="width:100%">
+                    <!-- <img src="img/1-cover.png" style="width:100%"> -->
+                    <!-- <img src="img/1-sketch.png" style="width:100%"> -->
+                </div>
+            </div>
+            <h1>Street-style Photography</h1>
+            <iframe src="http://lightwidget.com/widgets/d898840d554353e9a23730856eade430.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+        </div>
+
+        <footer>
+            <a href="Qi_Zhang_Resume.pdf" class="intext-link">Resume</a> | 
+            <a href="styleguide.html" class="intext-link">Style Guide</a> | 
+            <a href="https://gitlab1.its.sfu.ca/qza62/portfolio.git" class="intext-link">Git Lab</a>
+        </footer>
+        
+        <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            var logo = document.getElementById("sticky-logo");
+
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                header.style.textAlign = "right";
+                header.style.backgroundColor = "rgba(255,255,255,0.8)";
+                logo.style.visibility = "visible";
+              } else {
+                header.classList.remove("sticky");
+                header.style.textAlign = "center";
+                // header.style.backgroundColor = "#f1f2f6";
+                logo.style.visibility = "hidden";
+              }
+            }
+        </script>
+    </body>
+</html>
