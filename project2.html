@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kiki Zhang | Mobile App Design</title>
-        <link rel="icon" href="img/qizhanglogo-icon.png">
+        <link rel="icon" href="img/qizhanglogo-black.png">
         <link href="css/main.css" rel="stylesheet">
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Roboto" rel="stylesheet">    </head>
@@ -21,6 +21,10 @@
             </nav>
         </header> -->
 
+        <div class="header" id="myHeader">
+            <a href="index.html#work" class="nav-button">Back to Home</a>
+        </div>
+
         <div class="project-container">
             <div class="grid-box">
                 <h1 class="title">Mobile App Design</h2>
@@ -29,6 +33,7 @@
 
             <div class="grid-box">
                 <h2 class="title">Overview</h2>
+                <!-- <img src="img/2-app-icon.png" alt="app icon"/> -->
                 <p>TagAStreet is an Android app I developed. Targeting at street style photography, TagAStreet allows users to add tags to their uploaded photos and view photos they want to see with selective tags. With few simple clicks, an outfit picture can be taken, tagged and shared within one single app. By clicking one to as many tags, pictures will be filtered automatically and viewed clearly. The application provides a fast and easy way of keeping as well as seeking daily outfit inspiration for the users.</p>
             </div>
 
@@ -41,7 +46,7 @@
                 <h3 class="title">Prototype</h3>
                 <div class="sub-grid-box">
                     <div class="parent">
-                        <img src="img/2-phone.png" class="project-img"/>
+                        <img src="img/2-phone-1.png" class="project-img"/>
                         <img src="img/2-gif-1.gif" class="project-gif over-img"/>
                     </div>
                 </div>
@@ -50,26 +55,68 @@
                 </div>
                 
                 <div class="sub-grid-box">
-                    <p></p>
+                    <p>If a girl brought an oversize denim jacket and she’s wondering how to wear it, she can use TagAStreet. By selecting the tag “denim”, she filtered out the pictures that only relate to denim. After that, if there is “jacket” tag, she can select it as well and the app will filter for her. Lastly, if there exists an “oversize” tag in the refreshed tag list, she can select and get the most precise image she is looking for. In this way, she can easily find the picture she wants. Moreover, if she feels good about her outfit, she can post her outfit picture to the app and contribute to the community as well.</p>
                 </div>
                 <div class="sub-grid-box">
                     <div class="parent">
-                        <img src="img/2-phone.png" class="project-img"/>
+                        <img src="img/2-phone-1.png" class="project-img"/>
                         <img src="img/2-gif-2.gif" class="project-gif over-img"/>
                     </div>
                 </div>
 
                 <h3 class="title">Development & Debug</h3>
-                <p>
+                <!-- <p>
                     <div class="sub-grid-box">
                         <img src="img/2-screen-1.jpg" class="project-img"/>
                     </div>
-                </p>
+                </p> -->
+                <table>
+                    <tr>
+                      <th>
+                        <div class="parent scalable">
+                            <img src="img/2-phone-2.png" class="project-img"/>
+                            <img src="img/2-screen-1.jpg" class="project-screenshot over-img"/>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="parent scalable">
+                            <img src="img/2-phone-2.png" class="project-img"/>
+                            <img src="img/2-screen-2.jpg" class="project-screenshot over-img"/>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="parent scalable">
+                            <img src="img/2-phone-2.png" class="project-img"/>
+                            <img src="img/2-screen-3.jpg" class="project-screenshot over-img"/>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="parent scalable">
+                            <img src="img/2-phone-2.png" class="project-img"/>
+                            <img src="img/2-screen-4.jpg" class="project-screenshot over-img"/>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="parent scalable">
+                            <img src="img/2-phone-2.png" class="project-img"/>
+                            <img src="img/2-screen-5.jpg" class="project-screenshot over-img"/>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>Home page, the latest uploaded pictures will appear first</td>
+                      <td>Select first tag, only available tags left, images with the selected tag are shown</td>
+                      <td>Select second tags, images with the two selected tags are shown</td>
+                      <td>Photo taking mode</td>
+                      <td>Add tags to the picture and upload</td>
+                    </tr>
+                </table>
             </div>
 
             <div class="grid-box">
                 <h2 class="title">Problems and Solutions</h2>
                 <p>In the beginning, the purpose of the app in my original proposal was to upload street style pictures and share with people. However, at this stage, I only learned how to store images in local storage and did not figure out the web server part. After speaking with the professor, I realized the app can also serve another purpose. Therefore, I changed my main function of the app to “keeping your daily outfit inspo”, which can store the images and view the images in the user’s own phone.</p>
+                <p>As each tag has different length, a longer tag may ruin the current design. The possible future solution will be using recyclerview to display the tags rather than gridview. So that the appearance of the tags will be flexible in size.</p>
             </div>
 
             <div class="grid-box">
@@ -83,7 +130,9 @@
         </div>
 
         <footer>
-            <a href="styleguide.html" class="intext-link">Style Guide</a>
+            <a href="Qi_Zhang_Resume.pdf" class="intext-link">Resume</a> | 
+            <a href="styleguide.html" class="intext-link">Style Guide</a> | 
+            <a href="https://gitlab1.its.sfu.ca/qza62/portfolio.git" class="intext-link">Git Lab</a>
         </footer>
         
     </body>

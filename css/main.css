@@ -21,13 +21,24 @@ body{
 }
 
 section {
-    margin-bottom: 2rem;
+    margin: 2rem 1rem;
 }
 
 .top-container {
-  /* background-color: #f1f2f6; */
+  height: 94vh;
   padding: 55px;
+  line-height: 1.5rem;
   text-align: center;
+  color: #fff;
+  background-color: #000;
+  background-image: url("../img/infinity.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+.p-about {
+    max-width: 42rem;
+    text-align: left;
 }
 
 .header {
@@ -51,6 +62,12 @@ section {
   padding-top: 102px;
 }
 
+.top-logo {
+    position: absolute;
+    left: 24%;
+    top: 32%;
+}
+
 .top-logo a{
     text-decoration: none;
     color: inherit;
@@ -66,6 +83,11 @@ section {
 .top-logo h1{
     display: inline-block;
     vertical-align: middle;
+}
+
+.top-logo a.intext-link{
+    color: inherit;
+    text-decoration: underline;
 }
 
 a#sticky-logo {
@@ -313,7 +335,26 @@ footer .intext-link{
 }
 
 .project-gif {
-    width: 64%;
+    width: 85.7%;
+}
+
+.project-screenshot {
+    width: 63%;
+}
+
+.project-screenshot.over-img{
+    position: absolute;
+    top: 13.8%;
+    left: 25.2%;
+}
+
+.scalable {
+    transition: all .2s ease-in-out;
+}
+
+.scalable:hover{
+    transform: scale(2);
+    z-index: 1;
 }
 
 .parent{
@@ -322,8 +363,18 @@ footer .intext-link{
 
 .over-img{
     position: absolute;
-    top: 14%;
-    left: 24.5%;
+    top: 11.8%;
+    left: 7.8%;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    padding: 2px 5px;
+    text-align: center;
+    border-left: 1px solid #ccc;
 }
 
 /*breakpoints*/
@@ -361,6 +412,12 @@ footer .intext-link{
     .project-container{
         width: 80%;
     }
+
+    .top-logo {
+        left: 11%;
+        top: 30%;
+        width: 70%;
+    }
 }
 
 @media (max-width:650px){
@@ -395,6 +452,10 @@ footer .intext-link{
 
     .project-container{
         width: 90%;
+    }
+
+    section {
+        margin: 1rem 0.5rem;
     }
 }
 

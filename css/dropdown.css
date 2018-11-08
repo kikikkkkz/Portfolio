@@ -9,14 +9,15 @@
 	padding-top: 0.5rem;
 }
 
-.logo h1 {
-	font-size: 1.5rem;
-	padding-top: 0.2rem;
-}
-
 .logo a {
 	text-decoration: none;
 	color: #000;
+}
+
+.logo img{
+	width: 2.5rem;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 nav{
@@ -55,7 +56,7 @@ nav{
 }
 
 @media (min-width: 680px) {
-	.menunav {
+	/* .menunav {
 		padding: 0 2rem;
 		padding-top: 0.5rem;
 		margin: 0;
@@ -105,7 +106,7 @@ nav{
 
 	  .menunav li .active-nav i {
 		color: rgb(245,184,16);
-	  }
+	  } */
 }
 
 @media screen and (max-width:900px) {
