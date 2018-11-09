@@ -41,6 +41,14 @@ section {
     text-align: left;
 }
 
+.p-caption {
+    text-align: center;
+}
+
+.link-item {
+    display: inline-block;
+}
+
 .header {
   padding: 10px 10px;
   text-align: center;
@@ -216,7 +224,7 @@ li a {
 
 .sub-grid-box {
     padding: 0;
-    /* margin: 1em; */
+    margin: 0 0.5em;
     width: 45%;
     height: auto;
 }
@@ -285,23 +293,6 @@ a.img-cover img {
 
 a.img-cover img:hover {
     transform: scale(1.1);
-}
-
-#intro {
-    position: relative;
-    height: 300px;
-    background-image: linear-gradient(#63cdda, #f1f2f6);
-    z-index: -1;
-}
-#intro .text {
-    padding: 1rem 5rem;
-}
-svg {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10vw;
-    /* set height to pixels if you want angle to change with screen width */
 }
 
 .title {
@@ -429,8 +420,8 @@ td {
 
     a.nav-button {
         font-size: 1rem;
-        margin: 0.7rem 1rem;
-        padding: 0.1rem 1rem;
+        /* margin: 0.7rem 1rem;
+        padding: 0.1rem 1rem; */
     }
 
     .main {
@@ -438,24 +429,21 @@ td {
       padding: 1rem 1rem;
     }
 
-    #intro {
-        height: auto;
-    }
-
-    #intro .text {
-        padding: 2rem;
-    }
-
     .sub-grid-box {
         margin: 0.5rem;
     }
 
     .project-container{
-        width: 90%;
+        width: 86%;
     }
 
     section {
         margin: 1rem 0.5rem;
+    }
+
+    .link-item {
+        width: 80%;
+        padding-left: 1.5rem;
     }
 }
 
