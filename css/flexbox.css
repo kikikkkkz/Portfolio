@@ -1,0 +1,15 @@
+.container {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.flex-project {
+    padding: 0.5rem 1rem;
+    flex: 1 1 18rem;
+    justify-content: space-around;
+}
+
+/* .img-cover{
+    border: solid black 1px;
+    box-shadow: 10px 10px 10px grey;
+} */

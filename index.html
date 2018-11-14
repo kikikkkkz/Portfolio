@@ -6,10 +6,11 @@
         <title>Kiki Zhang | Portfolio</title>
         <link rel="icon" href="img/qizhanglogo-black.png">
         <link href="css/main.css" rel="stylesheet">
+        <link href="css/flexbox.css" rel="stylesheet">
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
-        
+
     <body>
         <div class="top-container">
             <div class="top-logo">
@@ -20,7 +21,7 @@
                 <div class="p-about">I am Kiki Zhang, a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. I love exploring and I believe one's ability is infinite. I have experience with <a href="#project1" class="intext-link">branding design</a> and <a href="#project2" class="intext-link">mobile app development</a>. My interest is design and technology and I want to pursue a career in <span class="color-text">UI/UX design</span> or <span class="color-text">product design</span>.</div>
             </div>
         </div>
-              
+          
         <div class="header" id="myHeader">
             <a href="#" id="sticky-logo"><img src="img/qizhanglogo-grey.png" alt="logo in grey"></a>
             <a href="#work" class="nav-button">Work</a>
@@ -28,57 +29,32 @@
             <a href="gallery.html" class="nav-button">Gallery</a>
         </div>
 
-              
+
         <div class="main content">
-            
             <section id="work">
-            <div class="grid-box">
+            <div class="container">
                 <h2 class="title">Work</h2>
-                <div class="sub-grid-box" id="project1">
+                <div class="flex-project" id="project1">
                     <h3 class="title">Visual Design</h3>
-                    <a href="project1.html" class="img-cover"><img src="img/1-cover.png" alt="cover"></a>
+                    <a href="project1.html" class="img-cover"><img src="img/1-cover.png" alt="cover image for project 1"></a>
                     <h4>Branding redesign for a local start-up company</h4>
                     <a href="project1.html" class="link-button float-right">View More</a>
                 </div>
-                <div class="sub-grid-box" id="project2">
+                <div class="flex-project" id="project2">
                     <h3 class="title">Mobile App Design</h3>
-                    <a href="project2.html" class="img-cover"><img src="img/2-cover.png" alt="cover"></a>
+                    <a href="project2.html" class="img-cover"><img src="img/2-cover.png" alt="cover image for project 2"></a>
                     <h4>An Android app TagAStreet from design to coding</h4>
                     <a href="project2.html" class="link-button float-right">View More</a>
                 </div>
             </div>
             </section>
 
-            <!-- <section id="about">
-                <div class="grid-box">
-                    <div class="sub-grid-box">
-                    <h2 class="title">About Me</h2>
-                    </div>
-                    <div class="sub-grid-box">
-                    <p>
-                    I am Kiki Zhang, a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. I have experience with <a href="#project1" class="intext-link">brand designing</a> and <a href="#project2" class="intext-link">mobile app development</a>. My interest is design and technology and I want to pursue a career in <span class="color-text">UI/UX design</span> or <span class="color-text">product design</span>. -->
-                    
-                    <!-- <p>
-                        I am Qi(Kiki) Zhang, a junior student pursuing <span class="color-text">Interactive Arts and Technology</span> major at Simon Fraser University. My interest in UI and UX begins when I started to use the Internet. I remembered how some elements whether appear on the websites or mobile apps wow me sometimes, and I also saw how an easy-to-navigate app can help people, especially family and friends around me. Now, as a design student, I love to make engaging interaction and bring human and computer together.
-                    </p> 
-                    I am a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. My interest is <span class="color-text">fashion</span> and <span class="color-text">technology</span> and I want to pursue a career in making more possibilities between these two industries.
-                    <br> -->
-                    <!-- <span class="emphasize-text">"Designer"</span> As a <span class="color-text">fashion lover</span>, I work as a <a href="https://www.instagram.com/psychotographer" class="intext-link" target="_blank">freelance street style photographer</a> during New York fashion week and go deep into the industry through reading lots of news and researching through the website and social media.
-                    <br>
-                    <span class="emphasize-text">"Programmer"</span>As a <span class="color-text">technologist</span>, I learn coding not only in the class but also do lots of self-study during free time. I am able to build a website or a <a href="#" class="intext-link">mobile app</a> with my existing skills.
-                    <br>
-                    <span class="emphasize-text">"UX to me..."</span>In terms of <span class="color-text">user experience</span>, I like to think about design we see in everyday life. I always pay attention to the design failure and come up with multiple ways to improve it. How to make users feel delighted and make the user experience more fluent are the problems I want to focus on. -->
-                    <!-- </p>
-                    </div>
-                </div>
-            </section> -->
-
             <section id="contact">
-                <div class="grid-box">
-                    <div class="sub-grid-box">
+                <div class="container">
+                    <div class="flex-project">
                         <h2 class="title">Contact</h2>
                     </div>
-                    <div class="sub-grid-box">
+                    <div class="flex-project">
                         <p>qza62@sfu.ca | 613-890-6438 | Vancouver</p>
                     </div>
                 </div>
@@ -88,10 +64,10 @@
         <footer>
             <a href="Qi_Zhang_Resume.pdf" class="intext-link">Resume</a> | 
             <a href="styleguide.html" class="intext-link">Style Guide</a> | 
+            <a href="reference.html" class="intext-link">Reference</a> | 
             <a href="https://gitlab1.its.sfu.ca/qza62/portfolio.git" class="intext-link">Git Lab</a>
         </footer>
         
-
         <script>
             window.onscroll = function() {myFunction()};
             

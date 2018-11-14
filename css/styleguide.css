@@ -56,6 +56,16 @@ h3.style-subtitle {
     padding: 1rem 0 1rem 2.8rem;
 }
 
+a.link-button {
+    margin: 0.5rem 1.6rem;
+    display: inline-block;
+}
+
+a.link-button-dark {
+    margin: 0.5rem 1.6rem;
+    display: inline-block;
+}
+
 /* color box */
 .color-container {
     display: flex;
@@ -180,6 +190,16 @@ h3.style-subtitle {
         -webkit-border-radius: 30px;
         border-radius: 30px;
         text-align: center;
+    }
+}
+
+@media (max-width:495px){
+    a.link-button {
+        margin: 0.5rem auto;
+    }
+    
+    a.link-button-dark {
+        margin: 0.5rem auto;
     }
 }
 
