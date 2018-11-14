@@ -6,61 +6,27 @@
         <title>Kiki Zhang | Portfolio</title>
         <link rel="icon" href="img/qizhanglogo-black.png">
         <link href="css/main.css" rel="stylesheet">
-        <link href="css/dropdown.css" rel="stylesheet">
         <!-- font family -->
-        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Roboto" rel="stylesheet">    </head>
-
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+        
     <body>
-        <!-- <header>
-            <nav>
-                <ul>
-                    <li><a href="#" class="nav-button"><img src="img/qizhanglogo-icon.png"></a></li>
-                    <li><a href="#work" class="nav-button">Work</a></li>
-                    <li><a href="#about" class="nav-button">About</a></li>
-                    <li><a href="#contact" class="nav-button">Contact</a></li>
-                </ul>
-            </nav>
-        </header> -->
-
-            <!-- <header> -->
-                <!-- company logo -->
-                <!-- <div class="logo">
-                    <a href="#"><img src="img/qizhanglogo-icon.png"></a>
-                </div> -->
-                 <!-- dropdown menu -->
-                <!-- <nav class="box" id="menu">
-            
-                    <div class="box-item-nav">
-                        <a href="#" class="button bg">Home</a>
-                    </div>
-            
-                    <div class="box-item-nav">
-                        <a href="#contact" class="button bg">Contact</a>
-                    </div>
-            
-                    <div class="box-item-nav">
-                        <a href="gallery.html" class="button bg">Gallery</a>
-                    </div>
-            
-                </nav>
-            </header> -->
-
-            <div class="top-container">
-                <div class="top-logo">
-                    <a href="#">
-                        <img src="img/qizhanglogo-white.png">
-                        <h1>Kiki Zhang</h1>
-                    </a>
-                    <div class="p-about">I am Kiki Zhang, a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. I love exploring and I believe one's ability is infinite. I have experience with <a href="#project1" class="intext-link">branding design</a> and <a href="#project2" class="intext-link">mobile app development</a>. My interest is design and technology and I want to pursue a career in <span class="color-text">UI/UX design</span> or <span class="color-text">product design</span>.</div>
-                </div>
-              </div>
+        <div class="top-container">
+            <div class="top-logo">
+                <a href="#">
+                    <img src="img/qizhanglogo-white.png" alt="logo in white">
+                    <h1>Kiki Zhang</h1>
+                </a>
+                <div class="p-about">I am Kiki Zhang, a 3rd-year <span class="color-text">Interactive Art & Technology</span> student at Simon Fraser University. I love exploring and I believe one's ability is infinite. I have experience with <a href="#project1" class="intext-link">branding design</a> and <a href="#project2" class="intext-link">mobile app development</a>. My interest is design and technology and I want to pursue a career in <span class="color-text">UI/UX design</span> or <span class="color-text">product design</span>.</div>
+            </div>
+        </div>
               
-              <div class="header" id="myHeader">
-                <a href="#" id="sticky-logo"><img src="img/qizhanglogo-grey.png"></a>
-                <a href="#work" class="nav-button">Work</a>
-                <a href="#contact" class="nav-button">Contact</a>
-                <a href="gallery.html" class="nav-button">Gallery</a>
-              </div>
+        <div class="header" id="myHeader">
+            <a href="#" id="sticky-logo"><img src="img/qizhanglogo-grey.png" alt="logo in grey"></a>
+            <a href="#work" class="nav-button">Work</a>
+            <a href="#contact" class="nav-button">Contact</a>
+            <a href="gallery.html" class="nav-button">Gallery</a>
+        </div>
 
               
         <div class="main content">
@@ -125,7 +91,7 @@
             <a href="https://gitlab1.its.sfu.ca/qza62/portfolio.git" class="intext-link">Git Lab</a>
         </footer>
         
-        <script src="js/dropdown.js"></script>
+
         <script>
             window.onscroll = function() {myFunction()};
             
@@ -137,6 +103,7 @@
               if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");
                 header.style.textAlign = "right";
+                header.style.backgroundColor = "rgba(255,255,255,0.8)";
                 logo.style.visibility = "visible";
               } else {
                 header.classList.remove("sticky");

@@ -283,6 +283,7 @@ a.intext-link:hover, a.intext-link:focus {
 }
 
 a.img-cover img {
+    box-shadow: 0px 0px 10px #f1f2f6;
     width: 100%;
     background-color: #ccc;
     height: 15rem;
@@ -299,6 +300,12 @@ a.img-cover img:hover {
     width: 100%;
 }
 
+.subtitle {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #57606f;
+}
+
 footer {
     margin-top: 2rem;
     padding: 2rem;
@@ -312,6 +319,10 @@ footer .intext-link{
 }
 
 /*style for project page*/
+#nav-logo img {
+    width: 3.5rem;
+}
+
 .project-container {
     position: relative;
     height: auto;
@@ -329,8 +340,12 @@ footer .intext-link{
     width: 85.7%;
 }
 
+.project-phone {
+    width: 12rem;
+}
+
 .project-screenshot {
-    width: 63%;
+    width: 7.6rem;
 }
 
 .project-screenshot.over-img{
@@ -344,8 +359,8 @@ footer .intext-link{
 }
 
 .scalable:hover{
-    transform: scale(2);
-    z-index: 1;
+    /* transform: scale(2);
+    z-index: 1; */
 }
 
 .parent{
@@ -358,6 +373,21 @@ footer .intext-link{
     left: 7.8%;
 }
 
+.table {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    /* border: 1px solid #ddd; */
+}
+
+tr:nth-child(even){
+    background-color: #f1f2f6;
+}
+
 th {
     text-align: center;
 }
@@ -366,6 +396,10 @@ td {
     padding: 2px 5px;
     text-align: center;
     border-left: 1px solid #ccc;
+}
+
+caption {
+    color: #57606f;
 }
 
 /*breakpoints*/
@@ -464,6 +498,7 @@ td {
 .column img {
     margin-top: 8px;
     vertical-align: middle;
+    width: 100%;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -480,4 +515,8 @@ td {
         flex: 100%;
         max-width: 100%;
     }
+}
+
+.logo-design-img {
+    width: 100%;
 }
