@@ -63,7 +63,7 @@ section {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;;
+  z-index: 1;
 }
 
 .sticky + .content {
@@ -319,8 +319,15 @@ footer .intext-link{
 }
 
 /*style for project page*/
-#nav-logo img {
+a#nav-logo img {
     width: 3.5rem;
+    cursor: pointer;
+}
+
+.img-caption {
+    text-align: center;
+    color: #57606f;
+    font-size: 0.9rem;
 }
 
 .project-container {
@@ -373,7 +380,7 @@ footer .intext-link{
     left: 7.8%;
 }
 
-.table {
+.project-table {
     overflow-x: auto;
 }
 
@@ -400,6 +407,7 @@ td {
 
 caption {
     color: #57606f;
+    text-align: center;
 }
 
 /*breakpoints*/
@@ -515,8 +523,4 @@ caption {
         flex: 100%;
         max-width: 100%;
     }
-}
-
-.logo-design-img {
-    width: 100%;
 }
