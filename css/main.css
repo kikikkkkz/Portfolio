@@ -306,6 +306,8 @@ a.img-cover img:hover {
     font-size: 1.1em;
     font-weight: 400;
     color: #57606f;
+    width: 100%;
+    line-height: 1.5em;
 }
 
 footer {
