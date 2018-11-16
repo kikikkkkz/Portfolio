@@ -244,7 +244,7 @@ a.link-button {
     border: 2px solid #57606f;
 }
     
-a.link-button:hover {
+a.link-button:hover, a.link-button:focus {
     color: white;
     background-color: #57606f;
     transition: background-color 0.3s;
@@ -265,7 +265,7 @@ a.link-button-dark {
     color: white;
 }
     
-a.link-button-dark:hover {
+a.link-button-dark:hover, a.link-button-dark:focus {
     color: #57606f;
     background-color: white;
     border: 2px solid #57606f;
@@ -294,7 +294,7 @@ a.img-cover img {
     transition: all .2s ease-in-out;
 }
 
-a.img-cover img:hover {
+a.img-cover img:hover, a.img-cover img:focus {
     transform: scale(1.1);
 }
 
@@ -369,7 +369,7 @@ a#nav-logo img {
     transition: all .2s ease-in-out;
 }
 
-.scalable:hover{
+.scalable:hover, .scalable:focus{
     /* transform: scale(2);
     z-index: 1; */
 }
@@ -410,10 +410,40 @@ td {
     vertical-align: top;
 }
 
-caption {
+.scroll-group-title {
+    display: block;
     color: #57606f;
     text-align: left;
 }
+
+.scroll-group {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.step {
+    display: inline-block;
+    margin: 0 -0.3rem 0 0;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 5rem;
+}
+
+.step-text {
+    width: 12rem;
+    height: 5.2rem;
+    white-space: normal;
+    text-align: center;
+    padding: 0.2rem 0.3rem;
+    background-color: #f1f2f6;
+    border-left: 1px solid #ccc;
+    margin: 0;
+}
+
 
 /*breakpoints*/
 @media (max-width:900px) {
