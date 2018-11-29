@@ -5,30 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kiki Zhang | Mobile App Design</title>
         <link rel="icon" href="img/qizhanglogo-black.png">
-        <link href="css/main.css" rel="stylesheet">
+
+        <style>
+            body{font-family:'Roboto', sans-serif;margin:0;padding:0}section{margin:2rem 1rem}h1{font-family:'Hammersmith One', sans-serif;font-size:2.3em;font-weight:700}a.nav-button{text-decoration:none;font-size:1.1rem;font-weight:400;color:#000000;border-bottom:#000 1px solid;margin:0.8rem 1rem;padding:0.2rem 0.5rem}a.nav-button:hover{border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}a.nav-button:focus{color:#63cdda;border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}
+        </style>
+        
+        <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript>
+            <link rel="stylesheet" href="css/main.css">
+		</noscript>
+
+		<script>
+			(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=false}return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i+=1){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+        </script>
+
+        <!-- <link href="css/main.css" rel="stylesheet"> -->
+
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+    </head>
 
     <body>
-        <!-- <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html#" class="nav-button"><img src="img/qizhanglogo-icon.png"></a></li>
-                    <li><a href="index.html#work" class="nav-button">Work</a></li>
-                    <li><a href="index.html#about" class="nav-button">About</a></li>
-                    <li><a href="index.html#contact" class="nav-button">Contact</a></li>
-                </ul>
-            </nav>
-        </header> -->
-
-        <div class="header" id="myHeader">
+        <!-- <div class="header" id="myHeader">
             <a href="index.html#work" id="nav-logo"><img src="img/qizhanglogo-grey.png" alt="logo in grey"></a>
+        </div> -->
+
+        <div class="header sticky" id="myHeader">
+            <a href="index.html" id="sticky-logo"><img src="img/qizhanglogo-grey.png" alt="logo in grey"></a>
+            <a href="index.html#work" class="nav-button">Work</a>
+            <a href="index.html#contact" class="nav-button">Contact</a>
+            <a href="gallery.html" class="nav-button">Gallery</a>
         </div>
 
         <div class="project-container">
             <div class="grid-box">
-                <h1 class="title">Mobile App Design</h1>
+                <h1 class="title">TagAStreet | Mobile App Design</h1>
                 <div class="title subtitle">An Android app TagAStreet from design to coding</div>
             </div>
 
@@ -48,7 +60,8 @@
                 <div class="sub-grid-box">
                     <div class="parent">
                         <img src="img/2-phone-1.png" class="project-img" alt="phone image"/>
-                        <img src="img/2-gif-1.gif" class="project-gif over-img" alt="gif"/>
+                        <img src="img/2-gif-1.jpg" data-src="img/2-gif-1.gif" class="project-gif over-img lazyload blur" alt="gif"/>
+                        <noscript><img src="img/2-gif-1.gif" class="project-gif over-img" alt="interaction gif I"/></noscript>
                     </div>
                     <p class="img-caption">Figure 1 - Interactive prototype of UI for filtering pictures</p>
                 </div>
@@ -62,63 +75,13 @@
                 <div class="sub-grid-box">
                     <div class="parent">
                         <img src="img/2-phone-1.png" class="project-img" alt="phone image"/>
-                        <img src="img/2-gif-2.gif" class="project-gif over-img" alt="gif"/>
+                        <img src="img/2-gif-2.jpg" data-src="img/2-gif-2.gif" class="project-gif over-img lazyload blur" alt="gif"/>
+                        <noscript><img src="img/2-gif-2.gif" class="project-gif over-img" alt="interaction gif II"/></noscript>
                     </div>
                     <p class="img-caption">Figure 2 - Interactive prototype of UI for taking picture</p>
                 </div>
 
                 <h3 class="title">Development & Debug</h3>
-                <!-- <div class="project-table">
-                <table>
-                    <caption>Steps for navigating the app</caption>
-                    <tr>
-                      <th>
-                        <div class="parent scalable">
-                            <img src="img/2-phone-2.png" class="project-phone" alt="phone image"/>
-                            <img src="img/2-screen-1.jpg" class="project-screenshot over-img" alt="screenshot"/>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="parent scalable">
-                            <img src="img/2-phone-2.png" class="project-phone" alt="phone image"/>
-                            <img src="img/2-screen-2.jpg" class="project-screenshot over-img" alt="screenshot"/>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="parent scalable">
-                            <img src="img/2-phone-2.png" class="project-phone" alt="phone image"/>
-                            <img src="img/2-screen-3.jpg" class="project-screenshot over-img" alt="screenshot"/>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="parent scalable">
-                            <img src="img/2-phone-2.png" class="project-phone" alt="phone image"/>
-                            <img src="img/2-screen-4.jpg" class="project-screenshot over-img" alt="screenshot"/>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="parent scalable">
-                            <img src="img/2-phone-2.png" class="project-phone" alt="phone image"/>
-                            <img src="img/2-screen-5.jpg" class="project-screenshot over-img" alt="screenshot"/>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="parent scalable">
-                            <img src="img/2-phone-2.png" class="project-phone" alt="phone image"/>
-                            <img src="img/2-screen-6.jpg" class="project-screenshot over-img" alt="screenshot"/>
-                        </div>
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>1 | Home page, the latest uploaded pictures will appear first</td>
-                      <td>2 | Select first tag, only available tags left, images with the selected tag are shown</td>
-                      <td>3 | Select second tag, images with the two selected tags are shown</td>
-                      <td>4 | Select third tag, images with the three selected tags are shown</td>
-                      <td>5 | Enter photo taking mode when the camera button is pressed</td>
-                      <td>6 | Add tags to the photo and upload</td>
-                    </tr>
-                </table>
-                </div> -->
                 
                 <div class="scroll-group">
                     <div class="scroll-group-title">Steps for navigating the app</div>
@@ -192,15 +155,26 @@
             </div>
 
             <div class="grid-box">
-                <a href="index.html#work" class="link-button-dark">Back</a>
+                <a href="gallery.html" class="link-button-dark">View Gallery</a>
             </div>
         </div>
 
         <footer>
-            <a href="Qi_Zhang_Resume.pdf" class="intext-link">Resume</a> | 
+            <a href="Qi_Zhang_Resume.pdf" class="intext-link" target="_blank">Resume</a> | 
             <a href="styleguide.html" class="intext-link">Style Guide</a> | 
-            <a href="https://gitlab1.its.sfu.ca/qza62/portfolio.git" class="intext-link">Git Lab</a>
+            <a href="reference.html" class="intext-link">Reference</a> | 
+            <a href="https://gitlab1.its.sfu.ca/qza62/portfolio.git" class="intext-link" target="_blank">Git Lab</a>
         </footer>
         
+        <script>
+            var header = document.getElementById("myHeader");
+            var logo = document.getElementById("sticky-logo");
+
+            header.style.textAlign = "right";
+            header.style.backgroundColor = "rgba(255,255,255,0.8)";
+            logo.style.display = "block";
+        </script>
+
+        <script src="js/lazysizes.min.js"></script>
     </body>
 </html>

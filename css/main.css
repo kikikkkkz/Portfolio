@@ -6,11 +6,11 @@ div > * {
     transition: all 0.2s linear;
 }
 
-body{
+/* body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-}
+} */
 
 .main {
     display: flex;
@@ -19,13 +19,13 @@ body{
     flex-wrap: wrap;
 }
 
-section {
+/* section {
     margin: 2rem 1rem;
-}
+} */
 
 .top-container {
-    height: 94vh;
-    padding: 55px;
+    height: 93vh;
+    padding: 3.43rem;
     line-height: 1.5rem;
     text-align: center;
     color: #fff;
@@ -36,8 +36,8 @@ section {
 }
 
 .top-container-gif {
-    height: 92vh;
-    padding: 55px;
+    height: 93vh;
+    padding: 3.43rem;
     line-height: 1.5rem;
     text-align: center;
     color: #fff;
@@ -61,9 +61,8 @@ section {
 }
 
 .header {
-  padding: 10px 10px;
+  padding: 0.625rem;
   text-align: center;
-  /* background-color: #f1f2f6; */
 }
 
 .content {
@@ -78,7 +77,7 @@ section {
 }
 
 .sticky + .content {
-  padding-top: 102px;
+  padding-top: 6.375rem;
 }
 
 .top-logo {
@@ -114,7 +113,7 @@ section {
 }
 
 a#sticky-logo {
-    visibility: hidden;
+    display: none;
     float: left;
     margin: 0 0.6rem;
 }
@@ -122,10 +121,6 @@ a#sticky-logo {
 a#sticky-logo img {
     width: 1.5rem;
 }
-/* for debugging */
-/* .main div {
-    border: #ccc 1px solid;
-} */
 
 .placeholder {
     height: 25rem;
@@ -134,11 +129,11 @@ a#sticky-logo img {
 }
 
 /* Headings */
-h1 {
+/* h1 {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 2.3em;
     font-weight: 700;
-}
+} */
 
 h2 {
     font-size: 2em;
@@ -164,7 +159,7 @@ p {
     line-height: 1.5em;
 }
 
-#work h2, #about h2, #contact h2{
+#work h2, #contact h2, h2#illustration, h2#logo, h2#photography{
     border-left: 8px solid #63cdda;
     padding-left: 1rem; 
 }
@@ -179,8 +174,9 @@ p {
     margin-right: 0.2rem;
 }
 
-/* button */
-a.nav-button {
+
+/* navigation bar */
+/* a.nav-button {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 400;
@@ -199,32 +195,13 @@ a.nav-button:focus {
     color: #63cdda;
     border-bottom: transparent 1px solid;
     transition: color 0.3s;
-}
+} */
 
 a.nav-button img {
     width: 4rem;
 }
 
-/* navigation bar*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-decoration: none;
-    top: 10rem;
-    right: 0;
-    position: fixed;
-}
-
-li {
-    cursor: pointer;
-}
-
-li a {
-    display: block;
-}
-
+/* grid */
 .grid-box {
     /* margin: 0 1em 1em 1em; */
     padding: 0;
@@ -244,6 +221,35 @@ li a {
     height: auto;
 }
 
+/* flexbox */
+.container {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.flex-project {
+    padding: 0.5rem 1rem;
+    flex: 1 1 18rem;
+    justify-content: space-around;
+}
+
+.project-link {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* border: #fff 3px solid; */
+}
+
+.project-link a:hover, .project-link a:focus {
+    /* border: #63cdda 3px solid; */
+    box-shadow: 0px 0px 16px #63cdda;
+}
+
+.project-link a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* button */
 a.link-button {
     display: block;
     padding: 0.6rem 2.4rem;
@@ -286,9 +292,9 @@ a.link-button-dark:hover, a.link-button-dark:focus {
     transition: background-color 0.3s;
 }
 
-.float-right {
+/* .float-right {
     float: right;
-}
+} */
 
 a.intext-link {
     color: #000;
@@ -298,22 +304,23 @@ a.intext-link:hover, a.intext-link:focus {
     color: #57606f;
 }
 
-a.img-cover img {
+div.img-cover img {
     box-shadow: 0px 0px 10px #f1f2f6;
     width: 100%;
     background-color: #ccc;
     height: 15rem;
     cursor: pointer;
     object-fit: cover;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
-a.img-cover:hover img, a.img-cover:focus img {
+/* a.img-cover:hover img, a.img-cover:focus img {
     transform: scale(1.1);
-}
+} */
 
 .title {
     width: 100%;
+    /* margin-bottom: 0rem; */
 }
 
 .subtitle {
@@ -326,7 +333,7 @@ a.img-cover:hover img, a.img-cover:focus img {
 
 footer {
     margin-top: 2rem;
-    padding: 2rem;
+    padding: 3rem;
     text-align: center;
     background-color: #000;
     color: #fff;
@@ -336,7 +343,7 @@ footer .intext-link{
     color: #fff;
 }
 
-/*style for project page*/
+/* style for project page */
 a#nav-logo img {
     width: 3.5rem;
     cursor: pointer;
@@ -379,6 +386,19 @@ a#nav-logo img {
     left: 25.2%;
 }
 
+/* allow for lazyloaded images to be blurred until loaded*/
+.blur {
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	transition: filter 400ms;
+}
+
+/* Once our image has loaded - and lazysizes.js has applied the .lazyloaded class - we can be more specific with our CSS selectors to allow for the blur to be removed from our image.*/
+.blur.lazyloaded {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
 .scalable {
     transition: all .2s ease-in-out;
 }
@@ -406,7 +426,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    /* border: 1px solid #ddd; */
 }
 
 tr:nth-child(even){
@@ -459,7 +478,7 @@ td {
 }
 
 
-/*breakpoints*/
+/* breakpoints */
 @media (max-width:900px) {
     h1 {
       font-size: 2em;
@@ -542,6 +561,14 @@ td {
         top: 18%;
         width: 74%;
     }
+
+    .title {
+        margin-top: 1.5rem;
+    }
+
+    .subtitle {
+        margin-top: 0.6rem;
+    }
 }
 
 @media (max-width:495px) {
@@ -552,7 +579,20 @@ td {
     a.link-button-dark {
         width: 100%;
     }
+
+    a.nav-button {
+        font-size: 0.9rem;
+        margin: 0.7rem 0.25rem;
+    }
 }
+
+@media (max-width:320px) {
+    .top-logo {
+        padding: 0.1rem;
+        top: 6%;
+    }
+}
+
 /*style for gallery page*/
 .row {
     display: flex;

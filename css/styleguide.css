@@ -1,5 +1,5 @@
 .page-title {
-    padding: 2rem 0;
+    padding: 3rem 0 1.6rem 0;
     height: 6rem;
     text-align: center;
 }
@@ -127,14 +127,17 @@ a.link-button-dark {
     .col1, .col2 {
         width: 100%;
     }
+
+    .page-title {
+        padding: 3rem 0 0 0;
+        margin-bottom: 0; 
+    }
 }
 
 @media (max-width:900px) {
     .col1 h2 {
         text-align: left;
-        /* padding: 0 0 0 2rem; */
-        /* margin: 0 0 1rem 0; */
-        margin: 2rem 0 1rem 0;
+        margin: 2rem 0 0 0;
     }
   
     .style * {
