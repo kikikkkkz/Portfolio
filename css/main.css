@@ -328,6 +328,7 @@ div.img-cover img {
     color: #57606f;
     width: 100%;
     line-height: 1.5em;
+    margin-top: 0;
 }
 
 footer {
@@ -370,6 +371,7 @@ a#nav-logo img {
 
 .project-img {
     width: 100%;
+    margin-top: 1.5rem;
 }
 
 .project-gif {
@@ -397,7 +399,7 @@ a#nav-logo img {
 	transition: filter 400ms;
 }
 
-/* Once our image has loaded - and lazysizes.js has applied the .lazyloaded class - we can be more specific with our CSS selectors to allow for the blur to be removed from our image.*/
+/* Once image has loaded - and lazysizes.js has applied the .lazyloaded class - we can be more specific with our CSS selectors to allow for the blur to be removed from our image.*/
 .blur.lazyloaded {
 	-webkit-filter: blur(0);
 	filter: blur(0);
@@ -409,7 +411,7 @@ a#nav-logo img {
 
 .over-img{
     position: absolute;
-    top: 11.8%;
+    top: 14.25%;
     left: 7.8%;
 }
 
@@ -563,10 +565,6 @@ td {
 
     .title {
         margin-top: 1.5rem;
-    }
-
-    .subtitle {
-        margin-top: 0rem;
     }
 }
 
