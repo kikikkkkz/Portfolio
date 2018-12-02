@@ -1,16 +1,16 @@
-*,*::after, *::before {
+/* *,*::after, *::before {
     box-sizing: border-box;
-}
+} */
 
 div > * {
     transition: all 0.2s linear;
 }
 
-/* body{
+body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-} */
+    /* margin: 0;
+    padding: 0; */
+} 
 
 .main {
     display: flex;
@@ -25,7 +25,7 @@ div > * {
 
 .top-container {
     height: 93vh;
-    padding: 3.43rem;
+    padding: 3.43rem 0;
     line-height: 1.5rem;
     text-align: center;
     color: #fff;
@@ -37,7 +37,7 @@ div > * {
 
 .top-container-gif {
     height: 93vh;
-    padding: 3.43rem;
+    padding: 3.43rem 0;
     line-height: 1.5rem;
     text-align: center;
     color: #fff;
@@ -54,10 +54,6 @@ div > * {
 
 .p-caption {
     text-align: center;
-}
-
-.link-item {
-    display: inline-block;
 }
 
 .header {
@@ -81,13 +77,10 @@ div > * {
 }
 
 .top-logo {
-    position: absolute;
-    left: 24%;
-    top: 32%;
     background-color: rgba(0,0,0,0.7);
     padding: 0 1rem 0.5rem 1rem;
-    /* margin: 4rem auto;
-    max-width: 38rem; */
+    margin: 28vh auto;
+    max-width: 38rem;
 }
 
 .top-logo a{
@@ -108,7 +101,7 @@ div > * {
 }
 
 .top-logo a.intext-link{
-    color: inherit;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -122,18 +115,12 @@ a#sticky-logo img {
     width: 1.5rem;
 }
 
-.placeholder {
-    height: 25rem;
-    width: 100%;
-    border: #ccc solid 1px;
-}
-
 /* Headings */
-/* h1 {
+h1 {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 2.3em;
     font-weight: 700;
-} */
+}
 
 h2 {
     font-size: 2em;
@@ -203,7 +190,6 @@ a.nav-button img {
 
 /* grid */
 .grid-box {
-    /* margin: 0 1em 1em 1em; */
     padding: 0;
     width: 100%;
     height: auto;
@@ -221,6 +207,22 @@ a.nav-button img {
     height: auto;
 }
 
+a.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-link .project-div {
+    background: #fff;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover .project-div, .project-link:focus .project-div {
+    transform: scale(1.1);
+}
+
 /* flexbox */
 .container {
     display: flex; 
@@ -233,24 +235,8 @@ a.nav-button img {
     justify-content: space-around;
 }
 
-.project-link {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    /* border: #fff 3px solid; */
-}
-
-.project-link:hover, .project-link:focus {
-    /* border: #63cdda 3px solid; */
-    box-shadow: 0px 0px 16px #63cdda;
-}
-
-.project-link a{
-    text-decoration: none;
-    color: inherit;
-}
-
 /* button */
-a.link-button {
+a.link-button, p.link-button {
     display: block;
     padding: 0.6rem 2.4rem;
     font-size: 1rem;
@@ -261,10 +247,11 @@ a.link-button {
     width: 12rem;
     text-align: center;
     letter-spacing: 0.06rem;
+    line-height: 1rem;
     border: 2px solid #57606f;
 }
     
-a.link-button:hover, a.link-button:focus {
+a.link-button:hover, a.link-button:focus, p.link-button:hover, p.link-button:focus {
     color: white;
     background-color: #57606f;
     transition: background-color 0.3s;
@@ -292,12 +279,9 @@ a.link-button-dark:hover, a.link-button-dark:focus {
     transition: background-color 0.3s;
 }
 
-/* .float-right {
-    float: right;
-} */
-
 a.intext-link {
     color: #000;
+    cursor: pointer;
 }
 
 a.intext-link:hover, a.intext-link:focus {
@@ -313,10 +297,6 @@ div.img-cover img {
     object-fit: cover;
     transition: all .3s ease-in-out;
 }
-
-/* a.img-cover:hover img, a.img-cover:focus img {
-    transform: scale(1.1);
-} */
 
 .title {
     width: 100%;
@@ -364,14 +344,12 @@ a#nav-logo img {
     position: relative;
     height: auto;
     width: 60%;
-    margin: auto;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 5rem auto;
 }
 
 .project-img {
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 0.8rem;
 }
 
 .project-gif {
@@ -388,8 +366,8 @@ a#nav-logo img {
 
 .project-screenshot.over-img{
     position: absolute;
-    top: 13.8%;
-    left: 25.2%;
+    top: 14%;
+    left: 24.8%;
 }
 
 /* allow for lazyloaded images to be blurred until loaded*/
@@ -411,33 +389,8 @@ a#nav-logo img {
 
 .over-img{
     position: absolute;
-    top: 14.25%;
+    top: 13.4%;
     left: 7.8%;
-}
-
-.project-table {
-    overflow-x: auto;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-}
-
-tr:nth-child(even){
-    background-color: #f1f2f6;
-}
-
-th {
-    text-align: center;
-}
-
-td {
-    padding: 3px 5px;
-    text-align: center;
-    border-left: 1px solid #ccc;
-    vertical-align: top;
 }
 
 .scroll-group-title {
@@ -473,7 +426,6 @@ td {
     border-left: 1px solid #ccc;
     margin: 0;
 }
-
 
 /* breakpoints */
 @media (max-width:900px) {
@@ -511,12 +463,6 @@ td {
         width: 80%;
     }
 
-    .top-logo {
-        left: 11%;
-        top: 30%;
-        width: 70%;
-    }
-
     h2.p-title {
         margin-bottom: 0;
     }
@@ -531,8 +477,6 @@ td {
 
     a.nav-button {
         font-size: 1rem;
-        /* margin: 0.7rem 1rem;
-        padding: 0.1rem 1rem; */
     }
 
     .main {
@@ -546,6 +490,8 @@ td {
 
     .project-container{
         width: 86%;
+        margin-top: 3rem;
+        margin-bottom: 0;
     }
 
     section {
@@ -558,18 +504,12 @@ td {
     }
 
     .top-logo {
-        left: 12%;
-        top: 18%;
-        width: 74%;
-    }
-
-    .title {
-        margin-top: 1.5rem;
+        margin: 10vh auto;
     }
 }
 
 @media (max-width:495px) {
-    a.link-button {
+    a.link-button, p.link-button {
         width: 100%;
     }
 
@@ -587,29 +527,26 @@ td {
     }
 }
 
-@media (max-width:320px) {
-    .top-logo {
-        padding: 0.1rem;
-        top: 6%;
-    }
+/*style for gallery page*/
+.link-item {
+    display: inline-block;
 }
 
-/*style for gallery page*/
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 0.25rem;
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
     flex: 25%;
     max-width: 25%;
-    padding: 0 4px;
+    padding: 0 0.25rem;
 }
 
 .column img {
-    margin-top: 8px;
+    margin-top: 0.5rem;
     vertical-align: middle;
     width: 100%;
 }

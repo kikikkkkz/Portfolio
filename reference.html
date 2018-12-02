@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kiki Zhang Portfolio - Reference</title>
+        <title>Kiki Zhang | Reference</title>
         <link rel="icon" href="img/qizhanglogo-black.png">
 
         <style>
-            body{font-family:'Roboto', sans-serif;margin:0;padding:0}section{margin:2rem 1rem}h1{font-family:'Hammersmith One', sans-serif;font-size:2.3em;font-weight:700}a.nav-button{text-decoration:none;font-size:1.1rem;font-weight:400;color:#000000;border-bottom:#000 1px solid;margin:0.8rem 1rem;padding:0.2rem 0.5rem}a.nav-button:hover{border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}a.nav-button:focus{color:#63cdda;border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}
+            *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}body{margin:0;padding:0}section{margin:2rem 1rem}a.nav-button{text-decoration:none;font-size:1.1rem;font-weight:400;color:#000000;border-bottom:#000 1px solid;margin:0.8rem 1rem;padding:0.2rem 0.5rem}a.nav-button:hover{border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}a.nav-button:focus{color:#63cdda;border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}
         </style>
         
         <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -20,9 +20,6 @@
 		<script>
 			(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=false}return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i+=1){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
         </script>
-
-        <!-- <link href="css/main.css" rel="stylesheet">
-        <link href="css/styleguide.css" rel="stylesheet"> -->
         
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -35,10 +32,6 @@
             <a href="index.html#contact" class="nav-button">Contact</a>
             <a href="gallery.html" class="nav-button">Gallery</a>
         </div>
-
-        <!-- <div class="header" id="myHeader">
-            <a href="index.html" id="nav-logo"><img src="img/qizhanglogo-grey.png" alt="logo in grey"></a>
-        </div> -->
 
         <h1 class="page-title">Reference</h1>
         <div class="main">
@@ -58,7 +51,6 @@
                 </div>
             </div>
 
-
             <!-- Code section -->
             <div class="col1">
                 <div class="style-title">
@@ -70,10 +62,21 @@
                 <h3 class="style-subtitle">Index page & Gallery page</h3>
                 <div class="style-section">
                     <p>
-                        Sticky navigation bar. Retrieved from <a href="https://www.w3schools.com/howto/howto_js_sticky_header.asp" class="intext-link">https://www.w3schools.com/howto/howto_js_sticky_header.asp</a>.<br>
+                        Sticky navigation bar. Retrieved from <a href="https://www.w3schools.com/howto/howto_js_sticky_header.asp" class="intext-link">https://www.w3schools.com/howto/howto_js_sticky_header.asp</a>.
+                    </p>
+                </div>
+                <h3 class="style-subtitle">Gallery page</h3>
+                <div class="style-section">
+                    <p>
                         Responsive widget for Instagram. Retrieved from <a href="https://lightwidget.com/" class="intext-link">https://lightwidget.com/</a>.
                     </p>
-                </div> 
+                </div>
+                <h3 class="style-subtitle">Project 2 page</h3>
+                <div class="style-section">
+                    <p>
+                        Lazy sizes. Retrieved from <a href="https://github.com/aFarkas/lazysizes" class="intext-link">https://github.com/aFarkas/lazysizes</a>.
+                    </p>
+                </div>
             </div>
 
         </div>

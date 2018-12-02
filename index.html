@@ -8,7 +8,7 @@
 
         <!-- deferred loading -->
         <style>
-            body{font-family:'Roboto', sans-serif;margin:0;padding:0}section{margin:2rem 1rem}h1{font-family:'Hammersmith One', sans-serif;font-size:2.3em;font-weight:700}a.nav-button{text-decoration:none;font-size:1.1rem;font-weight:400;color:#000000;border-bottom:#000 1px solid;margin:0.8rem 1rem;padding:0.2rem 0.5rem}a.nav-button:hover{border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}a.nav-button:focus{color:#63cdda;border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}
+            *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}body{margin:0;padding:0}section{margin:2rem 1rem}a.nav-button{text-decoration:none;font-size:1.1rem;font-weight:400;color:#000000;border-bottom:#000 1px solid;margin:0.8rem 1rem;padding:0.2rem 0.5rem}a.nav-button:hover{border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}a.nav-button:focus{color:#63cdda;border-bottom:transparent 1px solid;-webkit-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}
         </style>
         
         <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -19,8 +19,6 @@
 		<script>
 			(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=false}return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i+=1){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
         </script>
-        
-        <!-- <link href="css/main.css" rel="stylesheet">-->
 
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -50,18 +48,26 @@
             <section id="work">
             <div class="container">
                 <h2 class="title">Work</h2>
-                <div class="flex-project project-link" id="project1"><a href="project1.html">
-                    <h3 class="title">Visual Design</h3>
-                    <div class="img-cover"><img src="img/1-cover.png" alt="cover image for project 1"></div>
-                    <h4>Brand redesign for a local start-up company</h4>
-                    <a href="project1.html" class="link-button">See Details</a>
-                </a></div>
-                <div class="flex-project project-link" id="project2"><a href="project2.html">
-                    <h3 class="title">Mobile App Design</h3>
-                    <div class="img-cover"><img src="img/2-cover.png" alt="cover image for project 2"></div>
-                    <h4>An Android app TagAStreet from design to coding</h4>
-                    <a href="project2.html" class="link-button">See Details</a>
-                </a></div>
+                <div class="flex-project">
+                    <a href="project1.html" class="project-link">
+                        <div class="project-div" id="project1">
+                            <h3 class="title">Visual Design</h3>
+                            <div class="img-cover"><img src="img/1-cover.png" alt="cover image for project 1"></div>
+                            <h4>Brand redesign for a local start-up company</h4>
+                            <p class="link-button">View Project</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-project">
+                    <a href="project2.html" class="project-link">
+                        <div class="project-div" id="project2">
+                            <h3 class="title">Mobile App Design</h3>
+                            <div class="img-cover"><img src="img/2-cover.png" alt="cover image for project 2"></div>
+                            <h4>An Android app TagAStreet from design to coding</h4>
+                            <p class="link-button">View Project</p>
+                        </div>
+                    </a>
+                </div>
             </div>
             </section>
 
@@ -71,7 +77,7 @@
                         <h2 class="title">Contact</h2>
                     </div>
                     <div class="flex-project">
-                        <p>qza62@sfu.ca | 613-890-6438 | Vancouver</p>
+                        <p><a href="mailto:qza62@sfu.ca" class="intext-link">qza62@sfu.ca</a> | <a href="tel:1-613-890-6438" class="intext-link">613-890-6438</a> | Vancouver</p>
                     </div>
                 </div>
             </section>
@@ -110,13 +116,21 @@
             var project2 = document.getElementById("project2");
 
             function highlight1() {
-                project1.style.background = "#f1f2f6";
-                project2.style.background = "none";
+                // project1.style.background = "#f1f2f6";
+                project1.style.boxShadow = "0px 0px 16px #63cdda";
+                project2.style.boxShadow = "none";
+                window.setTimeout(clearHighlight, 1000);
             }
 
             function highlight2() {
-                project2.style.background = "#f1f2f6";
-                project1.style.background = "none";
+                project2.style.boxShadow = "0px 0px 16px #63cdda";
+                project1.style.boxShadow = "none";
+                window.setTimeout(clearHighlight, 1000);
+            }
+
+            function clearHighlight(){
+                project1.style.boxShadow = "none";
+                project2.style.boxShadow = "none";
             }
 
             //load gif background image in the end
